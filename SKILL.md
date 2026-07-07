@@ -1,5 +1,5 @@
 ---
-name: awwwards-frontend
+name: design-like-fable
 description: Criação de sites e landing pages com nível de direção de arte Awwwards — identidade visual opinativa, motion design com GSAP, experiências 3D com Three.js e copy persuasiva integrada ao layout. Use esta skill SEMPRE que o usuário pedir um site, landing page, portfólio, hero section, página institucional, one-pager ou qualquer interface web onde a estética importa — mesmo que ele não mencione "Awwwards", "premiado" ou "motion". Também use quando pedir animações de scroll, ScrollTrigger, efeitos WebGL, micro-interações ou quando disser que quer algo "incrível", "diferente", "com personalidade" ou "que não pareça feito por IA".
 ---
 
