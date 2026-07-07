@@ -1,4 +1,4 @@
-# awwwards-frontend
+# design-like-fable
 
 > Skill de agente (Claude Skills) para criar sites e landing pages com nível de direção de arte Awwwards — identidade opinativa, motion design com GSAP, SVG narrativo, Three.js com critério e copy integrada ao layout.
 
@@ -36,7 +36,7 @@ references/
 
 ```bash
 mkdir -p .claude/skills
-git clone https://github.com/Jamisson-Pinho/awwwards-frontend .claude/skills/awwwards-frontend
+git clone https://github.com/Jamisson-Pinho/design-like-fable .claude/skills/design-like-fable
 ```
 
 ## Pipeline recomendado
@@ -44,7 +44,7 @@ git clone https://github.com/Jamisson-Pinho/awwwards-frontend .claude/skills/aww
 Esta skill executa melhor quando alimentada por um **Dossiê de Narrativa** (skill `narrativa-de-produto`, que entrevista o cliente e extrai a metáfora central via procedimento mecânico) e pode herdar a assinatura pessoal da skill `estilo-devpinho`:
 
 ```
-narrativa-de-produto  →  awwwards-frontend | estilo-devpinho  →  página final
+narrativa-de-produto  →  design-like-fable | estilo-devpinho  →  página final
      (pensa)                    (constrói)
 ```
 
