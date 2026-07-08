@@ -46,6 +46,14 @@ Estes padrões são legítimos para ALGUNS briefs, mas aparecem independente do 
 - CTA "Saiba mais" / "Get Started" sem contexto
 - Três adjetivos vazios em sequência ("rápido, seguro e confiável")
 
+## Tells internos desta skill (defaults fabricados em casa)
+
+Padrões que ESTA skill tende a repetir entre projetos — o mesmo teste da inércia se aplica:
+- Fio SVG serpenteando entre seções, em qualquer projeto, com qualquer verbo — o fio só é legítimo se o verbo de motion for da família do traço E houver jornada sequencial real de 3+ etapas
+- Coordenadas/labels em fonte mono como eyebrow — poderoso quando codifica dado real, tique quando vira decoração
+- Repetir a família de assinatura do projeto anterior — rotação é obrigatória
+- Ao notar um novo padrão repetindo entre gerações desta skill, adicione-o aqui
+
 ## Como usar esta lista
 
 No portão anti-genérico, passe cada item do seu plano de tokens por esta lista. Para cada coincidência, pergunte: "escolhi isso PARA este sujeito ou cheguei aqui por inércia?" Se a resposta honesta for inércia, revise e registre o que mudou.

@@ -24,14 +24,30 @@ Só depois declare a **direção de arte em uma frase**. Ex: "brutalismo editori
 - **Cor**: paleta de 4–6 hex nomeados, com intenção declarada
 - **Tipo**: 2+ papéis — display com personalidade (usado com contenção), body complementar, utility para dados/legendas se necessário
 - **Layout**: conceito em uma frase + wireframe ASCII para comparar opções
-- **Assinatura**: O elemento único pelo qual esta página será lembrada. Se a página tem uma jornada sequencial real, o candidato default é um SVG narrativo que se desenha com o scroll (ver `references/motion.md`, seção "SVG narrativo")
+- **Assinatura**: O elemento único pelo qual esta página será lembrada. Derive-o do VERBO de motion, escolhendo entre as famílias do menu em `references/motion.md` (seção "Menu de famílias de assinatura") — nunca repita a família do projeto anterior
 - **Motion**: a linguagem de movimento em uma frase (ver `references/motion.md`)
 
 **Portão anti-genérico (obrigatório antes de codar):**
 Simule mentalmente um prompt parecido. Se você chegaria num plano similar, aquele trecho é default, não escolha — revise-o e diga o que mudou e por quê. Consulte `references/lista-negra.md` e verifique cada item do plano contra ela. Só depois de aprovar o próprio plano, escreva código — seguindo o plano exatamente, derivando cada cor e decisão tipográfica dele.
 
-**Passada 2 — Autocrítica pós-build:**
-Releia o resultado como jurado: tem UMA coisa memorável? O resto está quieto e disciplinado? Conselho da Chanel: antes de entregar, remova um acessório. Se seu ambiente permite screenshot, tire um — uma imagem vale 1000 tokens de autoengano.
+**Passada 2 — Checklist de pré-entrega (obrigatório, marque item a item por escrito):**
+
+Antes de entregar, percorra TODOS os itens. Qualquer ☐ reprovado = corrija antes de entregar, não depois.
+
+- ☐ Hero tem UM botão de CTA (um segundo botão só existe com justificativa escrita no plano)
+- ☐ Zero numeração decorativa: 01/02/03 só aparecem se as seções forem sequência real (quem-somos/preço/depoimento NÃO são)
+- ☐ Zero parallax, contador animado, typewriter ou efeito sem justificativa no verbo de motion do plano
+- ☐ Cada animação existente responde: "qual verbo do plano ela mimetiza?" — sem resposta, remove
+- ☐ Se há fio SVG: verbo é de traço E jornada tem 3+ etapas sequenciais reais E cada waypoint está ancorado num elemento do DOM (posicionado via JS/medida), nunca em altura fixa do viewBox
+- ☐ Família de assinatura é diferente da usada no projeto anterior
+- ☐ Cores conferidas contra a lista negra E contra os hex dos exemplos/projetos anteriores (distância de um passo = imitação)
+- ☐ Estados iniciais de animação vivem em UM lugar: CSS oculta via classe (`html.motion .anim`), JS anima com `autoAlpha` — nada oculto só por JS (FOUC) nem CSS morto de animação
+- ☐ `prefers-reduced-motion` via `gsap.matchMedia()`, com página 100% legível sem JS
+- ☐ Erros de formulário orientam inline ao lado do campo — NUNCA `alert()`
+- ☐ Se veio de um Dossiê de Narrativa: a resistência principal do visitante tem um elemento concreto na página (seção, texto ou estrutura), e a figura de transferência assina em algum lugar visível
+- ☐ Teste da Chanel: existe UMA coisa memorável, o resto está quieto — e você removeu um acessório antes de entregar
+
+Se seu ambiente permite screenshot, tire um — uma imagem vale 1000 tokens de autoengano.
 
 ## Economia de ousadia
 

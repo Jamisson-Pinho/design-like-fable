@@ -11,12 +11,19 @@ Erros observados em produção. Leia antes de escrever código com GSAP, Three.j
 - **FOUC de elementos animados:** elementos que entram animados devem começar invisíveis via CSS (`visibility: hidden` + `autoAlpha` no GSAP), não via JS — senão piscam antes do JS carregar
 - **Tween novo a cada mousemove:** cria centenas de tweens concorrentes. Use `gsap.quickTo()` para tracking de cursor
 
+## UX e formulários
+
+- **`alert()`/`confirm()` como validação:** nunca. Erro aparece inline, ao lado do campo, com texto que orienta ("Precisamos do seu e-mail para confirmar o horário"), campo recebe foco e `aria-describedby`
+- **Sucesso falso de formulário:** botão que vira "Enviado" sem backend engana o usuário. Em protótipo, deixe claro no código (comentário TODO) e mostre um estado de confirmação honesto
+
 ## SVG path animation
 
 - **`getTotalLength()` em SVG oculto ou não renderizado retorna 0** e a animação morre em silêncio. Meça só depois do SVG estar no DOM e visível (não dentro de `display:none`)
 - **`dasharray` de desenho vs `dasharray` de estilo tracejado conflitam:** para desenhar um traço que TERMINA tracejado, anime com `dasharray = comprimento total` e troque para o padrão tracejado ao completar (via callback/ScrollTrigger), nunca os dois ao mesmo tempo
 - **`preserveAspectRatio` esquecido:** path desenhado para desktop desalinha das seções em telas estreitas. Defina explicitamente (`xMidYMin meet`) e teste a 360px; em mobile, prefira reposicionar o fio para uma margem lateral
 - **Path com `vector-effect` ausente:** stroke escala junto com o viewBox e fica grosso demais em telas pequenas — use `vector-effect="non-scaling-stroke"` quando o traço deve ter espessura constante
+- **Fio "flutuante" com waypoints em altura fixa:** posicionar o SVG com `position:absolute` sem ancestral posicionado e marcar pontos em coordenadas fixas do viewBox desalinha de todo conteúdo real. Waypoints devem ser ancorados a elementos do DOM: meça `getBoundingClientRect()` das seções e posicione os pontos (e as curvas do path) a partir dessas medidas, re-medindo no resize
+- **Meia-implementação de estados iniciais:** classe CSS de oculto criada e nunca aplicada no HTML, com o JS escondendo por `fromTo` — os dois mecanismos precisam ser UM: `html.motion .anim { visibility:hidden }` no CSS + `autoAlpha` no GSAP, e a classe `motion` só entra via JS (sem JS, tudo visível)
 
 ## Three.js
 
